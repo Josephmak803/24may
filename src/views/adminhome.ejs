@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Login Page </title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="/home.css">
+</head>
+
+
+<body>
+    
+
+    <form action="/adminhome" method="post">
+
+        <header>
+        
+            <a href="#" class="logo">Ecommerce</a>
+            <div class = "signup_login">
+                 <a href="/login" class ="loginbutton link"> Login</a>
+            </div>
+            <div class="submit">
+                <button type="submit">Update</button>
+              </div>
+            </header>
+
+        <section class="shop">
+          <h1 class="section-title">Wood Work(EPL badges)</h1>
+          <div class="product-content">
+            <% products.forEach(function(product, index) { %>
+              <div class="product">
+                <div class="image">
+                  <img src="<%= product.image %>" alt="<%= product.name %>">
+                </div>
+                <h2 class="product_name"><%= product.name %></h2>
+                <div class="price-and-cart">
+                  <span class="price">
+                    <label for="price_<%= index %>">Price: </label>
+                    <input type="text" name="products[<%= index %>][price]" value="<%= product.price %>">
+                  </span>
+                  <br />
+                  <span class="stock_label">
+                    <label for="stock_<%= index %>">Stock: </label>
+                    <input type="text" name="products[<%= index %>][stock]" value="<%= product.stock %>">
+                  </span>
+                  <input type="hidden" name="products[<%= index %>][id]" value="<%= product._id %>">
+                </div>
+              </div>
+            <% }) %>
+          </div>
+        </section>
+      
+        
+      </form>
+
+    <script src ="/mainpage.js"></script>
+
+
+</body>
+

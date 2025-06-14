@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Login Page </title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="/home.css">
+</head>
+
+
+<body>
+    <header>
+        
+    <a href="#" class="logo">Ecommerce</a>
+    <div>Welcome <%= name %></div>
+    <div id="cart-icon">
+        <i class="ri-shopping-bag-line"></i>
+        <span class="cart-item-count"> </span> 
+    </div>
+    </header>
+
+    <div class = "payment page">
+        <h2 class = "payment title">Your items</h2>
+        
+
+    </div>
+
+    <div class ="cart"> 
+        <h2 class = "cart-title">Your Cart </h2> 
+        <div class ="cart-content">
+            <!--<div class ="cart-box">
+                <img src = "italian stiletto blackgold.jpg" class ="cart-image">
+                <div class ="cart-details">
+                    <h2 class ="cart-product title"> Italian stiletto (blackgold)</h2>
+                    <span class ="cart-price">$100</span>
+                    <div class ="cart-quantity">
+                        <button id="decrement">-</button>
+                        <span class= "number">1</span>
+                        <button id="increment">+</button>
+
+                    </div>
+                </div>
+                <i class="ri-delete-bin-line cart-remove"></i>
+            </div> -->
+        </div>
+        <div class ="total">
+            <div class="total-tile">Total</div>
+            <div class ="total-price">$0</div>
+        </div>
+        <button class ="btn-buy">Buy now</button>
+        <i class="ri-close-line" id ="cart-close"></i>
+    </div>
+
+
+
+
+    <section class = "shop">
+        <h1 class = "section-title">Wood Work(EPL badges)</h1>
+        <div class = "product-content">
+
+            
+                <% products.forEach(product => { %>
+                  <div class="product">
+                    <div class="image">
+                      <img src="<%= product.image %>" alt="<%= product.name %>">
+                    </div>
+                    <h2 class="product_name"><%= product.name %></h2>
+                    <div class="price-and-cart">
+                      <span class="price">$<%= product.price %></span>
+                      <span class = "stock_label">stock: </span>
+                      <span class ="stock"> <%= product.stock %> </span>
+                      <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <% }) %>
+
+                
+              
+
+            <!--<div class = "product">
+                <div class = "image">
+                    <img src = "italian stiletto rainbow.jpg">
+                </div>
+                <h2 class="product_name">Italian stiletto (rainbow)</h2>
+                <div class = "price-and-cart">
+                    <span class = "price"> $100 </span>
+                    <span class = "stock_label">stock: </span>
+                    <span class ="stock"> 10 </span>
+                    <i class="ri-shopping-bag-line add-cart"></i>
+                </div>
+            </div>
+
+            <div class = "product">
+                <div class = "image">
+                    <img src = "Petal.jpg">
+                </div>
+                <h2 class="product_name">Jigar Patel</h2>
+                <div class = "price-and-cart">
+                    <span class = "price"> $1 </span>
+                    <span class = "stock_label">stock: </span>
+                    <span class ="stock"> 10 </span>
+                    <i class="ri-shopping-bag-line add-cart"></i>
+                </div>
+            </div>
+
+            <div class = "product">
+                <div class = "image">
+                    <img src = "italian stiletto black.jpg">
+                </div>
+                <h2 class="product_name">Italian stiletto (black)</h2>
+                <div class = "price-and-cart">
+                    <span class = "price"> $100 </span>
+                    <span class = "stock_label">stock: </span>
+                    <span class ="stock"> 10 </span>
+                    <i class="ri-shopping-bag-line add-cart"></i>
+                </div>
+            </div>
+
+            <div class = "product">
+                <div class = "image">
+                    <img src = "curve stiletto white.jpg">
+                </div>
+                <h2 class="product_name">Curve stiletto (white)</h2>
+                <div class = "price-and-cart">
+                    <span class = "price"> $100 </span>
+                    <span class = "stock_label">stock: </span>
+                    <span class ="stock"> 10 </span>
+                    <i class="ri-shopping-bag-line add-cart"></i>
+                </div>
+            </div>
+
+            <div class = "product">
+                <div class = "image">
+                    <img src = "curve stiletto blue.jpg">
+                </div>
+                <h2 class="product_name">Curve stiletto (blue)</h2>
+                <div class = "price-and-cart">
+                    <span class = "price"> $100 </span>
+                    <span class = "stock_label">stock: </span>
+                    <span class ="stock"> 10 </span>
+                    <i class="ri-shopping-bag-line add-cart"></i>
+                </div>
+            </div>
+
+            <div class = "product">
+                <div class = "image">
+                    <img src = "curve istiletto silver.jpg">
+                </div>
+                <h2 class="product_name">Curve stiletto (silver)</h2>
+                <div class = "price-and-cart">
+                    <span class = "price"> $100 </span>
+                    <span class = "stock_label">stock: </span>
+                    <span class ="stock"> 10 </span>
+                    <i class="ri-shopping-bag-line add-cart"></i>
+                </div>
+            </div>
+
+            <div class = "product">
+                <div class = "image">
+                    <img src = "curve stiletto wooden.jpg">
+                </div>
+                <h2 class="product_name">Curve stiletto (wooden)</h2>
+                <div class = "price-and-cart">
+                    <span class = "price"> $100 </span>
+                    <span class = "stock_label">stock: </span>
+                    <span class ="stock"> 10 </span>
+                    <i class="ri-shopping-bag-line add-cart"></i>
+                </div>
+            </div>-->
+
+        </div>
+    </section>
+
+    <script src ="/mainpage.js"></script>
+
+
+</body>
+
